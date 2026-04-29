@@ -1,7 +1,7 @@
-## Interface: 11200
+## Interface: 30300
 ## Title: StealthOverlay
-## Notes: Adds fullscreen background texture while in stealth or prowl
-## Author: moh
-## Version: 1.2
+## Notes: Adds fullscreen background texture while in stealth or prowl (WotLK 3.3.5a)
+## Author: moh,nik
+## Version: 1.3
 
 StealthOverlay.xml

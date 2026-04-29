@@ -3,29 +3,27 @@
 	<Frame name="StealthOverlay" frameStrata="BACKGROUND" hidden="true" alpha="1">
 		<Scripts>
 			<OnLoad>
-                StealthOverlay_OnLoad();
+                StealthOverlay_OnLoad(self);
 			</OnLoad>
 			<OnEvent>
-				StealthOverlay_OnEvent(event, arg1, arg2);
+				StealthOverlay_OnEvent(self, event, arg1, arg2);
 			</OnEvent>
 		</Scripts>
 	</Frame>
-	<Frame name="StealthOverlayFrame" frameStrata="BACKGROUND" hidden="true" alpha="0">
+	<Frame name="StealthOverlayFrame" parent="UIParent" frameStrata="BACKGROUND" hidden="true" alpha="0">
 		<Scripts>
 			<OnLoad>
-				this.timer = 0;
-				this.onload = false;
-				this.display = false;
+				self.timer = 0;
+				self.onload = false;
+				self.display = false;
 			</OnLoad>
 			<OnUpdate>
-				StealthOverlay_OnUpdate(arg1);
+				StealthOverlay_OnUpdate(self, elapsed);
 			</OnUpdate>
 		</Scripts>
-		<Size>
-			<RelDimension x="1" y="1"/>
-		</Size>	
 		<Anchors>
-			<Anchor point="CENTER"/>
+			<Anchor point="TOPLEFT" relativeTo="UIParent" relativePoint="TOPLEFT" x="0" y="0"/>
+			<Anchor point="BOTTOMRIGHT" relativeTo="UIParent" relativePoint="BOTTOMRIGHT" x="0" y="0"/>
 		</Anchors>
 		<Backdrop bgFile="Interface\AddOns\StealthOverlay\bg"></Backdrop>
 	</Frame>
